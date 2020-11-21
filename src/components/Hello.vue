@@ -11,7 +11,7 @@
       <img class="cactus" :src="cactusList[hello_count % cactusList.length]">
       <h1 v-if="hello_count > 1">{{ hello_count }} people say hello !</h1>
       <h1 v-else-if="hello_count === 1">Only {{ hello_count
-        }} person says hello !</h1>
+        }} person says hello men !</h1>
       <h1 v-else-if="hello_count === 0">Nobody said hello !</h1>
       <md-button class="md-raised md-primary" @click.native="addHello">
         Say hello!
