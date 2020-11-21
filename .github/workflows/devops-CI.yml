@@ -22,8 +22,18 @@ jobs:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
+      
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     - run: npm test
     - run: npm run build
+    - name: push and build image docker
+      uses: mr-smithers-excellent/docker-build-push@v5
+      with:
+        image: kilwa95/projet-final-devops
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+
+ 
