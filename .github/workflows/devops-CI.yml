@@ -40,7 +40,7 @@ jobs:
           cli_config_credentials_token: ${{ secrets.API_TERRRAFORM_TOKEN }}
       - name: Terraform Format
         id: fmt
-        run: terraform fmt -check
+        run: terraform 0.13upgrade .
       - name: Terraform Init
         id: init
         run: terraform init
