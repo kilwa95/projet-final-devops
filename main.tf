@@ -1,5 +1,4 @@
 
-
 provider "scaleway" {
   access_key      = "SCW7Q77VGY2NB0BRVBGG"
   secret_key      = "e4f60e72-b97d-403a-8a24-1921ee06a17e"
@@ -47,4 +46,3 @@ resource "scaleway_instance_server" "my-ubuntu-instance" {
   security_group_id = scaleway_instance_security_group.my-security-group.id
 
 }
-
