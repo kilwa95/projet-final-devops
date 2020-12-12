@@ -34,8 +34,8 @@ jobs:
           registry: docker.io
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          
-      - uses: hashicorp/setup-terraform@v1 
+
+      - uses: hashicorp/setup-terraform@v1
         with:
           cli_config_credentials_token: ${{ secrets.API_TERRRAFORM_TOKEN }}
       - name: Terraform Format
@@ -49,4 +49,4 @@ jobs:
         run: terraform plan
         continue-on-error: true
       - name: Terraform Apply
-        run: terraform apply
+        run: terraform apply -auto-approve
