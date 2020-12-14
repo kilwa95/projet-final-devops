@@ -25,6 +25,8 @@ jobs:
       - run: npm install
       - run: npm test
       - run: npm run build
+      - run: mv dist/* /var/www/html/
+      - run: sudo systemctl restart nginx
       - name: push and build image docker
         uses: mr-smithers-excellent/docker-build-push@v4
         with:
