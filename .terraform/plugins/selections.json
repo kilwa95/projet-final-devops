@@ -1,0 +1,6 @@
+{
+  "registry.terraform.io/scaleway/scaleway": {
+    "hash": "h1:oeF2FQhGndflBV/K978gvw/gctTHxAo+4/FXQI48dHc=",
+    "version": "1.17.2"
+  }
+}
