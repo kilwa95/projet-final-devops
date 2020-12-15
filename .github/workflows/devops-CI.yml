@@ -6,7 +6,6 @@ name: devops-CI
 on:
   push:
     branches: [master]
-
 jobs:
   build:
     runs-on: self-hosted
