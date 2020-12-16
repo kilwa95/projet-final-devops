@@ -14,9 +14,19 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.front
+      networks:
+      app_net:
+        ipv4_address: 51.15.227.152
+        ipv6_address: 2001:bc8:624:1300::1
     ports:
       - 8080:8080
-    extra_hosts:
-      - "scalway: 51.15.227.152"
   redis:
     image: redis
+
+  networks:
+  app_net:
+    ipam:
+      driver: default
+      config:
+        - subnet: "51.15.227.152"
+        - subnet: "2001:bc8:624:1300::1"
