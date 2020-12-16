@@ -17,6 +17,6 @@ services:
     ports:
       - 8080:8080
     extra_hosts:
-      - "51.15.227.152"
+      - "scalway: 51.15.227.152"
   redis:
     image: redis
